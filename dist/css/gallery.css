@@ -1,7 +1,8 @@
 .gallery-wrapper {
   margin-top: 25px;
 }
-.gallery-wrapper h1 {
+
+.gallery-title {
   font-size: 50px;
   color: #052F5F;
   text-align: center;

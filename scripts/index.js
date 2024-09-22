@@ -1,13 +1,12 @@
 const priceButton = document.querySelector('.price-button-js');
-const priceTitleWrapper = document.querySelector('.price-title-wrapper-js');
+const priceWrapper = document.querySelector('.price-wrapper-js');
 const logo = document.querySelector('.logo-js');
 const eveningHours = document.querySelector('.evening-hours-js');
 
 priceButton.addEventListener('click', () => {
   const bodyRect = document.body.getBoundingClientRect();
-  const elemRect = priceTitleWrapper.getBoundingClientRect();
+  const elemRect = priceWrapper.getBoundingClientRect();
   const offset   = elemRect.top - bodyRect.top - 70;
-
   window.scroll({
     top: offset,
     behavior: "smooth"

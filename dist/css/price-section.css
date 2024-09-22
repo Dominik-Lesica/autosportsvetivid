@@ -1,6 +1,7 @@
 .price-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .table-wrapper {
@@ -29,12 +30,6 @@ td {
 .gratis-row {
   text-align: center;
   font-size: 30px;
-}
-
-.price-title-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
 }
 
 .price-title {
