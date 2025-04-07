@@ -15,6 +15,15 @@ main {
   margin-top: 70px;
 }
 
+input,
+textarea,
+button,
+select,
+a,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
+
 p {
   margin: 0;
 }
