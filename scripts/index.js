@@ -35,8 +35,6 @@ if(window.scrollY < 20) {
 
 if(window.matchMedia("(min-width: 900px)").matches) {
   document.querySelectorAll('.gallery-thumbnail-js').forEach((thumbnail, index) => {
-    let nextImg = index;
-    let lastImg = index;
     thumbnail.addEventListener('click' , () => {
       const html = `
       <div class="lightbox lightbox-js">
@@ -52,21 +50,22 @@ if(window.matchMedia("(min-width: 900px)").matches) {
       document.querySelector('.lightbox-x-icon').addEventListener('click', () => {
         document.querySelector('.lightbox').remove();
       })
-  
+      
+      let currentImg = index;
       document.querySelector('.right-arrow').addEventListener('click', () => {
-        nextImg++;
-        if(nextImg === 12) {
-          nextImg = 0
+        currentImg++;
+        if(currentImg === 12) {
+          currentImg = 0
         }
-        document.querySelector('.lightbox-img').src = `/imgs/gallery_img_${nextImg}.jpg`
+        document.querySelector('.lightbox-img').src = `/imgs/gallery_img_${currentImg}.jpg`
       })
   
       document.querySelector('.left-arrow').addEventListener('click', () => {
-        lastImg--;
-        if(lastImg === -1) {
-          lastImg = 11
+        currentImg--;
+        if(currentImg === -1) {
+          currentImg = 11
         }
-        document.querySelector('.lightbox-img').src = `/imgs/gallery_img_${lastImg}.jpg`
+        document.querySelector('.lightbox-img').src = `/imgs/gallery_img_${currentImg}.jpg`
       })
     })
   })  
